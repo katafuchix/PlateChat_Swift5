@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKjpSub-Regular.otf">
+            <string>NotoSansCJKjpSub-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="FootprintTableViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="FootprintTableViewCell" rowHeight="80" id="KGk-i7-Jjw" customClass="FootprintTableViewCell" customModule="P_Chat_" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnb-hR-l0s" customClass="CircleButton" customModule="P_Chat_" customModuleProvider="target">
+                        <rect key="frame" x="16" y="17" width="46" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="46" id="0OA-XU-3sk"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="46" id="7mX-Op-8PL"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="FQq-qI-DY7"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="46" id="GDd-oZ-XCL"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="LQ0-21-tF2"/>
+                            <constraint firstAttribute="height" constant="46" id="ifE-GG-Mx7"/>
+                            <constraint firstAttribute="width" constant="46" id="kz0-tO-TzX"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="46" id="lTC-mE-FcL"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="person-icon"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ve-r8-LCr">
+                        <rect key="frame" x="194" y="7" width="110" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="VMg-g5-cHU"/>
+                            <constraint firstAttribute="width" constant="110" id="jtJ-KT-Owl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsV-Us-IZu">
+                        <rect key="frame" x="70" y="21" width="234" height="18"/>
+                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-jQ-6FH">
+                        <rect key="frame" x="70" y="41" width="234" height="18"/>
+                        <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tsV-Us-IZu" firstAttribute="leading" secondItem="mnb-hR-l0s" secondAttribute="trailing" constant="8" id="09u-EH-xx1"/>
+                    <constraint firstAttribute="trailing" secondItem="4ve-r8-LCr" secondAttribute="trailing" constant="16" id="0wS-EQ-RLO"/>
+                    <constraint firstItem="hN3-jQ-6FH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="10" id="a0b-24-52E"/>
+                    <constraint firstItem="4ve-r8-LCr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="cx3-yR-H0g"/>
+                    <constraint firstItem="mnb-hR-l0s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dbI-AF-IWQ"/>
+                    <constraint firstItem="hN3-jQ-6FH" firstAttribute="leading" secondItem="mnb-hR-l0s" secondAttribute="trailing" constant="8" id="mYZ-bH-MtV"/>
+                    <constraint firstItem="tsV-Us-IZu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-10" id="oRt-xN-bwO"/>
+                    <constraint firstItem="hN3-jQ-6FH" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="pAj-Um-3NH"/>
+                    <constraint firstItem="tsV-Us-IZu" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="rqe-Lf-tr0"/>
+                    <constraint firstItem="mnb-hR-l0s" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sz1-KC-Wit"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="attrLabel" destination="hN3-jQ-6FH" id="3Bp-D4-wOH"/>
+                <outlet property="nameLabel" destination="tsV-Us-IZu" id="2ZY-DH-0jc"/>
+                <outlet property="profileImageButton" destination="mnb-hR-l0s" id="yj5-3R-kGK"/>
+                <outlet property="timeLabel" destination="4ve-r8-LCr" id="hEr-gs-5eL"/>
+            </connections>
+            <point key="canvasLocation" x="40" y="46.776611694152926"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person-icon" width="128" height="128"/>
+    </resources>
+</document>

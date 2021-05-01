@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lir-hk-Uw5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKjpSub-Regular.otf">
+            <string>NotoSansCJKjpSub-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--プライバシー・ポリシー-->
+        <scene sceneID="a4O-cc-ML2">
+            <objects>
+                <viewController storyboardIdentifier="PrivacyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lir-hk-Uw5" customClass="PrivacyViewController" customModule="PlateChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tg5-1W-XJp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smH-61-6ze">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">プライバシーポリシー
+
+本プライバシーポリシーは、MarinChat運営事務局（以下、当社）の提供するサービス MarinChat（以下、本サービス）内での情報の収集、利用、および開示に関する方針と手続きを説明したものです。当社はユーザーからの情報を、当社のウェブサイト、アプリケーション、サービスなどを通じて受け取ります。
+
+いずれのサービスを利用するにも、情報の収集、転送、操作、保管、開示、その他の利用に関するこのプライバシーポリシーに同意することになります。ユーザーが居住国やサービスを使う場所に関係なく、ユーザーからの情報は日本とその他の稼働する国で利用できるものとします。
+
+情報の取得と使用
+サービスを通じて得た情報は全て、サービス改善のためのみに使用されます。
+
+登録時に収集する情報について
+本サービスに登録する際には、名前、顔写真、年齢、性別といった情報が必要です。
+
+ログデータ
+当社サーバーは本サービスの利用の情報（以下"ログデータ"）を自動記録します。当社ウェブサイトやアプリケーション、広告をクリックするなどのやり取りもログデータに含めるものとします。
+
+本サービス内での他社サービスの利用
+当社は、当社のサービスを提供するため他社の多様なサービスを利用しています。たとえば、当社のサービスの利用状況を把握するためにGoogle Analyticsなどを用いています。これらのサービスはユーザーがアプリケーションを利用する際にIPアドレスの情報などを収集することがあります。
+
+情報の共有と開示
+ユーザーの個人的な情報は、ここに説明されているような限定的な状況以外では公開されません。
+
+法と有害性
+法律、規制または法的要求を遵守するため、すべての人の安全を守るため、不正利用、セキュリティまたは技術的な問題に対処するため、あるいは当社の権利や財産を保護するために、合理的に必要であると信じる場合、我々はユーザーの情報を保持または開示することがあります。
+
+事業譲渡
+破産、企業合併、企業買収、会社の再構成、資産売却などが当社に生じた場合、その取り引きの一環としてユーザーに関する情報が売却または譲渡されることがあります。本プライバシーポリシーで保証したことは、ユーザーに関する情報が新たな組織に移される場合にも適用されます。
+
+非公開あるいは個人的ではない情報
+当社は、ユーザーに関する情報のうち、非公開ではないものや集計したもの、個人的ではない統計情報を第三者に広告やマーケティングなどの用途で共有または開示することがあります。
+
+個人情報の変更
+ユーザーが当社のサービスに登録すると、当社は、ユーザーのアカウントに関連する形でユーザーが当社に提供した個人情報にアクセスしたり変更したりするためのツールを提供します。 ユーザーは、本サービスのアカウントを削除することができます。アカウントが削除されるとユーザーの情報は当社のサーバー上から速やかに削除されます。ただし、ユーザーが過去に情報を送信した別のユーザーのアプリ内の情報を消すことはできません。
+
+本ポリシーの変更
+当社は必要に応じて、このプライバシーポリシーを改定することがあります。 その際、プライバシーポリシーの最新版がユーザーの個人情報に関して適用されます。当社がポリシーを改定し、その改定が重大であるとみなされる場合には、お知らせします。 ポリシーの改定が発効した後も、当社サービスにアクセス、あるいはサービスを利用し続けた場合には、ユーザーが最新版のプライバシーポリシーに従うことに同意したとみなします。
+
+2014年12月13日制定</mutableString>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjpSub-Regular" family="NotoSansCJKjpSub-Regular" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="smH-61-6ze" firstAttribute="trailing" secondItem="IoE-6t-gxp" secondAttribute="trailing" id="JZP-AC-BnX"/>
+                            <constraint firstItem="smH-61-6ze" firstAttribute="bottom" secondItem="IoE-6t-gxp" secondAttribute="bottom" id="ULC-XC-rWp"/>
+                            <constraint firstItem="smH-61-6ze" firstAttribute="leading" secondItem="IoE-6t-gxp" secondAttribute="leading" id="pAf-d4-Sbi"/>
+                            <constraint firstItem="smH-61-6ze" firstAttribute="top" secondItem="IoE-6t-gxp" secondAttribute="top" id="wvd-VH-ovo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IoE-6t-gxp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="プライバシー・ポリシー" id="GbX-mU-hEH">
+                        <barButtonItem key="leftBarButtonItem" image="back" id="uG2-jM-om6">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="backButton" destination="uG2-jM-om6" id="1FI-6P-1wf"/>
+                        <outlet property="textView" destination="smH-61-6ze" id="oED-QW-Ob5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwD-go-DyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="-117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="24" height="24"/>
+    </resources>
+</document>

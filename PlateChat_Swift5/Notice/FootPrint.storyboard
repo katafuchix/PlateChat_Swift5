@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YgQ-f1-F3O">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Foot Print View Controller-->
+        <scene sceneID="naR-r7-Efp">
+            <objects>
+                <viewController storyboardIdentifier="FootPrintViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YgQ-f1-F3O" customClass="FootPrintViewController" customModule="P_Chat_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="piv-iL-2pY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IFx-zK-BMX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YgQ-f1-F3O" id="PlY-II-0zt"/>
+                                    <outlet property="delegate" destination="YgQ-f1-F3O" id="kd5-mU-XHW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IFx-zK-BMX" firstAttribute="trailing" secondItem="dDV-Nl-cH0" secondAttribute="trailing" id="2gC-6m-l9b"/>
+                            <constraint firstItem="IFx-zK-BMX" firstAttribute="bottom" secondItem="dDV-Nl-cH0" secondAttribute="bottom" id="EpF-mJ-8RU"/>
+                            <constraint firstItem="IFx-zK-BMX" firstAttribute="leading" secondItem="dDV-Nl-cH0" secondAttribute="leading" id="O69-S4-Unf"/>
+                            <constraint firstItem="IFx-zK-BMX" firstAttribute="top" secondItem="piv-iL-2pY" secondAttribute="top" id="vO4-I1-sGW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dDV-Nl-cH0"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="IFx-zK-BMX" id="iix-Ak-Czd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2A-Ff-zSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="-22.03898050974513"/>
+        </scene>
+    </scenes>
+</document>
