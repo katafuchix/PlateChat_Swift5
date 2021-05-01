@@ -6,11 +6,23 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseCrashlytics
+import UserNotifications
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    static var appDelegate: AppDelegate? {
+        return UIApplication.shared.delegate as? AppDelegate
+    }
+    var window: UIWindow?
+    private let notification: PushNotification = PushNotification()
+    //let color = "#40e0d0"
+    let color = "#7DD8C7"
 
+    open var passcodeWindow: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -31,6 +43,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    // チャット一覧のバッヂ
+    func showChatUnreadCount( _ value: String ) {
+        /*
+        guard let rootVC = self.window?.rootViewController else { return }
+        guard let tabVC = rootVC as? MainTabViewController else { return }
+        if let tabItems = tabVC.tabBar.items {
+            tabItems[2].badgeValue = value
+        }
+        */
+    }
 
+    func openPasscodeLock() {
+        /*
+        // パスコードが設定されていればパスコード画面を出す
+        if let pass = AccountData.passcode, !pass.isEmpty, !AccountData.isShowingPasscordLockView {
+            self.passcodeWindow = UIWindow.createNewWindow(
+                R.storyboard.passcodeLock.passcodeLockViewController()!
+            )
+            self.passcodeWindow?.open()
+        }
+ */
+    }
 }
 
