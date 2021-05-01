@@ -683,10 +683,10 @@
 		318DC73F263D1AD400966BAF /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				318DC743263D1AD400966BAF /* Search.storyboard */,
 				318DC740263D1AD400966BAF /* SearchViewController.swift */,
 				318DC741263D1AD400966BAF /* SearchWindowViewController.swift */,
 				318DC742263D1AD400966BAF /* UderDetail.storyboard */,
-				318DC743263D1AD400966BAF /* Search.storyboard */,
 				318DC744263D1AD400966BAF /* View */,
 				318DC74B263D1AD400966BAF /* UserDetailViewController.swift */,
 				318DC74C263D1AD400966BAF /* SearchWindow.storyboard */,

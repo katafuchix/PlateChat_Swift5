@@ -24,7 +24,9 @@ class ArticleListViewController: UIViewController {
             self.articles_org.append(article)
         }
     }
-
+    
+    var writeVC: WriteViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -179,12 +181,13 @@ extension ArticleListViewController : UITableViewDataSource, UITableViewDelegate
                 }
             }
 
-            let vc = R.storyboard.write.writeViewController()!
-            vc.delegate = self
-            vc.article = self.articles[indexPath.row]
+            self.writeVC = R.storyboard.write.writeViewController()!
+            self.writeVC?.delegate = self
+            self.writeVC?.article = self.articles[indexPath.row]
             //UIWindow.createNewWindow(vc).open()
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+            self.writeVC?.modalPresentationStyle = .overFullScreen
+            self.writeVC?.modalTransitionStyle   = .crossDissolve
+            self.present(self.writeVC!, animated: true, completion: nil)
         }).disposed(by: cell.disposeBag)
 
         return cell
@@ -196,6 +199,7 @@ extension ArticleListViewController : UITableViewDataSource, UITableViewDelegate
 
 extension ArticleListViewController: writeVCprotocol {
     func close() {
-        (UIApplication.shared.delegate as! AppDelegate).window?.close()
+        //(UIApplication.shared.delegate as! AppDelegate).window?.close()
+        self.writeVC?.dismiss(animated: true, completion: nil)
     }
 }

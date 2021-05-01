@@ -27,7 +27,8 @@ class UserDetailViewController: UIViewController {
     var articleService: ArticleService?
     var articles = [Article]()
     var uid: String?
-
+    var writeVC: WriteViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -343,12 +344,12 @@ extension UserDetailViewController : UITableViewDataSource, UITableViewDelegate 
         }).disposed(by: cell.disposeBag)
 
         cell.replyButton.rx.tap.asDriver().drive(onNext: { [weak self] _ in
-            let vc = R.storyboard.write.writeViewController()!
-            vc.delegate = self
-            vc.article = self?.articles[indexPath.row]
+            self?.writeVC = R.storyboard.write.writeViewController()!
+            self?.writeVC?.delegate = self
+            self?.writeVC?.article = self?.articles[indexPath.row]
             //UIWindow.createNewWindow(vc).open()
-            vc.modalPresentationStyle = .fullScreen
-            self?.present(vc, animated: true, completion: nil)
+            self?.writeVC?.modalPresentationStyle = .fullScreen
+            self?.present((self?.writeVC)!, animated: true, completion: nil)
         }).disposed(by: cell.disposeBag)
 
         return cell
@@ -368,7 +369,8 @@ extension UserDetailViewController : UITableViewDataSource, UITableViewDelegate 
 
 extension UserDetailViewController: writeVCprotocol {
     func close() {
-        (UIApplication.shared.delegate as! AppDelegate).window?.close()
+        //(UIApplication.shared.delegate as! AppDelegate).window?.close()
+        self.writeVC?.dismiss(animated: true, completion: nil)
     }
 }
 

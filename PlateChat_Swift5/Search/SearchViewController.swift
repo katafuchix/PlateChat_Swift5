@@ -21,6 +21,8 @@ class SearchViewController: UIViewController {
     var users = [LoginUser]()
     var users_org = [LoginUser]()
     private let refreshControl = UIRefreshControl()
+    
+    var searchWindowVC: SearchWindowViewController? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,11 +56,13 @@ class SearchViewController: UIViewController {
     func bind() {
         
         self.searchButton.rx.tap.asDriver().drive(onNext: { [weak self] _ in
-            let vc = R.storyboard.searchWindow.searchWindowViewController()!
-            vc.delegate = self
+            self?.searchWindowVC = R.storyboard.searchWindow.searchWindowViewController()!
+            self?.searchWindowVC?.delegate = self
             //UIWindow.createNewWindow(vc).open()
-            vc.modalPresentationStyle = .fullScreen
-            self?.present(vc, animated: true, completion: nil)
+            self?.searchWindowVC?.modalPresentationStyle = .overFullScreen
+            self?.searchWindowVC?.modalTransitionStyle   = .crossDissolve
+            
+            self?.present((self?.searchWindowVC)!, animated: true, completion: nil)
         }).disposed(by: rx.disposeBag)
 
         self.collectionTypeButton.rx.tap.asDriver().drive(onNext:{ [weak self] _ in
@@ -263,7 +267,8 @@ extension SearchViewController : UICollectionViewDelegate {
 
 extension SearchViewController: searchWindowVCprotocol {
     func close() {
-        (UIApplication.shared.delegate as! AppDelegate).window?.close()
+        //(UIApplication.shared.delegate as! AppDelegate).window?.close()
+        self.searchWindowVC?.dismiss(animated: true, completion: nil)
     }
 
     func search() {
@@ -272,6 +277,7 @@ extension SearchViewController: searchWindowVCprotocol {
         self.userService?.lastLoginUserDocument = nil
         self.collectionView.reloadData()    // セルが残っているかもしれないのでリセット
         self.observeUser()
-        (UIApplication.shared.delegate as! AppDelegate).window?.close()
+        //(UIApplication.shared.delegate as! AppDelegate).window?.close()
+        self.searchWindowVC?.dismiss(animated: true, completion: nil)
     }
 }
