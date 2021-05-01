@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
     var selectedImage = BehaviorRelay<UIImage?>(value: nil)
 
     var registVC: RegistProfileViewController? = nil
+    var writeVC: WriteViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,11 +59,12 @@ class HomeViewController: UIViewController {
                 }
             }
 
-            let vc = R.storyboard.write.writeViewController()!
-            vc.delegate = self
+            self.writeVC = R.storyboard.write.writeViewController()!
+            self.writeVC?.delegate = self
             //UIWindow.createNewWindow(vc).open()
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+            self.writeVC?.modalPresentationStyle = .overFullScreen
+            self.writeVC?.modalTransitionStyle   = .crossDissolve
+            self.present(self.writeVC!, animated: true, completion: nil)
         }).disposed(by: rx.disposeBag)
 
         self.reloadButton.rx.tap.asDriver().drive(onNext: { [weak self] _ in
@@ -305,7 +307,8 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
 
 extension HomeViewController: writeVCprotocol {
     func close() {
-        (UIApplication.shared.delegate as! AppDelegate).window?.close()
+        self.writeVC?.dismiss(animated: true, completion: nil)
+        //(UIApplication.shared.delegate as! AppDelegate).window?.close()
         //let indexPath = IndexPath(row: 0, section: 0)
         //self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
         /*
