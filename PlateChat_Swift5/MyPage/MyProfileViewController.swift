@@ -171,7 +171,9 @@ extension MyProfileViewController : UITableViewDataSource, UITableViewDelegate {
             let vc = R.storyboard.write.writeViewController()!
             vc.delegate = self
             vc.article = self?.articles[indexPath.row]
-            UIWindow.createNewWindow(vc).open()
+            //UIWindow.createNewWindow(vc).open()
+            vc.modalPresentationStyle = .fullScreen
+            self?.present(vc, animated: true, completion: nil)
         }).disposed(by: cell.disposeBag)
 
         return cell

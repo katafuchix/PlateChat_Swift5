@@ -26,6 +26,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        NetworkReachability.startListening()
+        
+        // Firebase
+        if let options = FirebaseOptions(contentsOfFile: Constants.GoogleServiceInfoPlistPath) {
+            FirebaseConfiguration.shared.setLoggerLevel(.min)
+            FirebaseApp.configure(options: options)
+            Crashlytics.crashlytics()
+            
+            // as? Timestamp
+            let database = Firestore.firestore()
+            let settings = database.settings
+            settings.areTimestampsInSnapshotsEnabled = true
+            // オフラインキャッシュ
+            //settings.isPersistenceEnabled = false
+            database.settings = settings
+        }
+
+        //UITabBar.appearance().barTintColor = UIColor.hexStr(hexStr: "#40e0d0", alpha: 1.0)
+        //ナビゲーションアイテムの色を変更
+        UINavigationBar.appearance().tintColor = UIColor.white
+        //ナビゲーションバーの背景を変更
+        UINavigationBar.appearance().barTintColor = UIColor.hexStr(hexStr: color as NSString, alpha: 1.0)
+        //ナビゲーションのタイトル文字列の色を変更
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.font: R.font.notoSansCJKjpSubBold(size: 15.0)!,
+            .foregroundColor: UIColor.white]
+        // remove bottom shadow
+        UINavigationBar.appearance().shadowImage = UIImage()
+        //UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
+        UIButton.appearance(whenContainedInInstancesOf: [UINavigationController.self]).tintColor = .white
+
+        // 通知用処理
+        self.notification.requestAuthorization()
+
+        // パスコード画面表示状態のチェック用パラメータをリセット
+        AccountData.isShowingPasscordLockView = false
+
+        // パスコードロック画面オープン
+        self.openPasscodeLock()
+
+        // for ImagePicker
+        RxImagePickerDelegateProxy.register { RxImagePickerDelegateProxy(imagePicker: $0) }
+
+        //キーボードの上の、next/prev/doneボタン
+        IQKeyboardManager.shared.enable = true
+        
         return true
     }
 
@@ -45,13 +93,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // チャット一覧のバッヂ
     func showChatUnreadCount( _ value: String ) {
-        /*
         guard let rootVC = self.window?.rootViewController else { return }
         guard let tabVC = rootVC as? MainTabViewController else { return }
         if let tabItems = tabVC.tabBar.items {
             tabItems[2].badgeValue = value
         }
-        */
     }
 
     func openPasscodeLock() {

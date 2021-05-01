@@ -56,7 +56,9 @@ class SearchViewController: UIViewController {
         self.searchButton.rx.tap.asDriver().drive(onNext: { [weak self] _ in
             let vc = R.storyboard.searchWindow.searchWindowViewController()!
             vc.delegate = self
-            UIWindow.createNewWindow(vc).open()
+            //UIWindow.createNewWindow(vc).open()
+            vc.modalPresentationStyle = .fullScreen
+            self?.present(vc, animated: true, completion: nil)
         }).disposed(by: rx.disposeBag)
 
         self.collectionTypeButton.rx.tap.asDriver().drive(onNext:{ [weak self] _ in

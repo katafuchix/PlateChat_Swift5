@@ -55,7 +55,9 @@ class HomeViewController: UIViewController {
 
             let vc = R.storyboard.write.writeViewController()!
             vc.delegate = self
-            UIWindow.createNewWindow(vc).open()
+            //UIWindow.createNewWindow(vc).open()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
         }).disposed(by: rx.disposeBag)
 
         self.reloadButton.rx.tap.asDriver().drive(onNext: { [weak self] _ in
@@ -186,7 +188,9 @@ class HomeViewController: UIViewController {
             if name.trimmingCharacters(in: .whitespaces) == "" {
                 let vc = R.storyboard.registProfile.registProfileViewController()!
                 vc.delegate = self
-                UIWindow.createNewWindow(vc).open()
+                //UIWindow.createNewWindow(vc).open()
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
             }
         }
     }
@@ -256,7 +260,8 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
             let vc = R.storyboard.write.writeViewController()!
             vc.delegate = self
             vc.article = self.articles[indexPath.row]
-            UIWindow.createNewWindow(vc).open()
+            //UIWindow.createNewWindow(vc).open()
+            self.present(vc, animated: true, completion: nil)
         }).disposed(by: cell.disposeBag)
 
         return cell
