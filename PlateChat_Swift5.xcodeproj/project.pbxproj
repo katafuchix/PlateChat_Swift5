@@ -1180,12 +1180,14 @@
 				BUNDLE_NAME_PREFIX = d_;
 				CODE_SIGN_ENTITLEMENTS = "PlateChat_Swift5/P-Chat!.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = U5LW6HVD99;
 				INFOPLIST_FILE = PlateChat_Swift5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.PlateChat-dev";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
@@ -1203,12 +1205,14 @@
 				BUNDLE_NAME_PREFIX = "";
 				CODE_SIGN_ENTITLEMENTS = "PlateChat_Swift5/P-Chat!.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = U5LW6HVD99;
 				INFOPLIST_FILE = PlateChat_Swift5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.p-chat";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
@@ -1281,12 +1285,14 @@
 				BUNDLE_NAME_PREFIX = "";
 				CODE_SIGN_ENTITLEMENTS = "PlateChat_Swift5/P-Chat!.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = U5LW6HVD99;
 				INFOPLIST_FILE = PlateChat_Swift5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.p-chat";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
