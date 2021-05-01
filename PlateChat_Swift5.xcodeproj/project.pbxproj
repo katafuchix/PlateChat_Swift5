@@ -174,6 +174,7 @@
 /* Begin PBXFileReference section */
 		29549607CEF9306AFF91E578 /* Pods-PlateChat_Swift5.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlateChat_Swift5.production.xcconfig"; path = "Target Support Files/Pods-PlateChat_Swift5/Pods-PlateChat_Swift5.production.xcconfig"; sourceTree = "<group>"; };
 		2BB5AC9D60D8FFF80A0F816A /* Pods-PlateChat_Swift5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlateChat_Swift5.release.xcconfig"; path = "Target Support Files/Pods-PlateChat_Swift5/Pods-PlateChat_Swift5.release.xcconfig"; sourceTree = "<group>"; };
+		3138D1BA263D32D800EFA3DC /* P-Chat!.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "P-Chat!.entitlements"; sourceTree = "<group>"; };
 		318DC5EC263D12DC00966BAF /* P-Chat!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P-Chat!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318DC5EF263D12DC00966BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318DC5F1263D12DC00966BAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -385,6 +386,7 @@
 		318DC5EE263D12DC00966BAF /* PlateChat_Swift5 */ = {
 			isa = PBXGroup;
 			children = (
+				3138D1BA263D32D800EFA3DC /* P-Chat!.entitlements */,
 				318DC606263D15F900966BAF /* Extensions */,
 				318DC669263D17B600966BAF /* Model */,
 				318DC655263D179000966BAF /* View */,
@@ -573,6 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				318DC6D8263D1A9700966BAF /* ViewModel */,
+				318DC6E1263D1A9700966BAF /* RegistProfile.storyboard */,
 				318DC6DA263D1A9700966BAF /* RegistProfileViewController.swift */,
 				318DC6DB263D1A9700966BAF /* WriteViewController.swift */,
 				318DC6DC263D1A9700966BAF /* Article.storyboard */,
@@ -580,7 +583,6 @@
 				318DC6DE263D1A9700966BAF /* Write.storyboard */,
 				318DC6DF263D1A9700966BAF /* Home.storyboard */,
 				318DC6E0263D1A9700966BAF /* HomeViewController.swift */,
-				318DC6E1263D1A9700966BAF /* RegistProfile.storyboard */,
 				318DC6E2263D1A9700966BAF /* HomeViewController+Extended.swift */,
 				318DC6E3263D1A9700966BAF /* View */,
 			);
@@ -608,8 +610,8 @@
 			isa = PBXGroup;
 			children = (
 				318DC6F3263D1AC900966BAF /* ViewModel */,
+				318DC702263D1AC900966BAF /* View */,
 				318DC6F5263D1AC900966BAF /* Privacy.storyboard */,
-				318DC6F6263D1AC900966BAF /* RuleViewController.swift */,
 				318DC6F7263D1AC900966BAF /* Profile.storyboard */,
 				318DC6F8263D1AC900966BAF /* ProfileEditTableViewController.swift */,
 				318DC6F9263D1AC900966BAF /* PrivacyPoricyViewController.swift */,
@@ -617,19 +619,19 @@
 				318DC6FB263D1AC900966BAF /* NewPasscodeInputViewController.swift */,
 				318DC6FC263D1AC900966BAF /* PrivacyPoricy.storyboard */,
 				318DC6FD263D1AC900966BAF /* MyPage.storyboard */,
-				318DC6FE263D1AC900966BAF /* Rule.storyboard */,
-				318DC6FF263D1AC900966BAF /* BlockListViewController.swift */,
-				318DC700263D1AC900966BAF /* NewPasscodeInput.storyboard */,
-				318DC701263D1AC900966BAF /* AccountTableViewController.swift */,
-				318DC702263D1AC900966BAF /* View */,
-				318DC707263D1AC900966BAF /* Faq.storyboard */,
-				318DC708263D1AC900966BAF /* BlockList.storyboard */,
-				318DC709263D1AC900966BAF /* PrivacyViewController.swift */,
 				318DC70A263D1AC900966BAF /* MyProfileViewController.swift */,
-				318DC70B263D1AC900966BAF /* PasscodeLock.storyboard */,
+				318DC6FE263D1AC900966BAF /* Rule.storyboard */,
+				318DC6F6263D1AC900966BAF /* RuleViewController.swift */,
+				318DC700263D1AC900966BAF /* NewPasscodeInput.storyboard */,
+				318DC707263D1AC900966BAF /* Faq.storyboard */,
 				318DC70C263D1AC900966BAF /* FaqViewController.swift */,
-				318DC70D263D1AC900966BAF /* Account.storyboard */,
+				318DC708263D1AC900966BAF /* BlockList.storyboard */,
+				318DC6FF263D1AC900966BAF /* BlockListViewController.swift */,
+				318DC709263D1AC900966BAF /* PrivacyViewController.swift */,
+				318DC70B263D1AC900966BAF /* PasscodeLock.storyboard */,
 				318DC70E263D1AC900966BAF /* PasscodeLockViewController.swift */,
+				318DC70D263D1AC900966BAF /* Account.storyboard */,
+				318DC701263D1AC900966BAF /* AccountTableViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -1176,6 +1178,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUNDLE_NAME_PREFIX = d_;
+				CODE_SIGN_ENTITLEMENTS = "PlateChat_Swift5/P-Chat!.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5LW6HVD99;
 				INFOPLIST_FILE = PlateChat_Swift5/Info.plist;
@@ -1198,6 +1201,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUNDLE_NAME_PREFIX = "";
+				CODE_SIGN_ENTITLEMENTS = "PlateChat_Swift5/P-Chat!.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5LW6HVD99;
 				INFOPLIST_FILE = PlateChat_Swift5/Info.plist;
@@ -1275,6 +1279,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUNDLE_NAME_PREFIX = "";
+				CODE_SIGN_ENTITLEMENTS = "PlateChat_Swift5/P-Chat!.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5LW6HVD99;
 				INFOPLIST_FILE = PlateChat_Swift5/Info.plist;

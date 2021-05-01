@@ -30,6 +30,8 @@ class HomeViewController: UIViewController {
     lazy var functions = Functions.functions()
     var selectedImage = BehaviorRelay<UIImage?>(value: nil)
 
+    var registVC: RegistProfileViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -187,11 +189,13 @@ class HomeViewController: UIViewController {
     func checkProfile() {
         if let name = AccountData.nickname {
             if name.trimmingCharacters(in: .whitespaces) == "" {
-                let vc = R.storyboard.registProfile.registProfileViewController()!
-                vc.delegate = self
+                self.registVC = R.storyboard.registProfile.registProfileViewController()!
+                self.registVC?.delegate = self
                 //UIWindow.createNewWindow(vc).open()
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
+                //vc.modalPresentationStyle = .fullScreen
+                self.registVC?.modalPresentationStyle = .overFullScreen
+                self.registVC?.modalTransitionStyle = .crossDissolve
+                self.present(self.registVC!, animated: true, completion: nil)
             }
         }
     }
@@ -395,11 +399,12 @@ extension HomeViewController : ruleDelegate {
 
 extension HomeViewController: registProfileVCprotocol {
     func closeRegist() {
-        (UIApplication.shared.delegate as! AppDelegate).window?.close()
+        //(UIApplication.shared.delegate as! AppDelegate).window?.close()
         self.showAlert("登録しました")
     }
 
     func closeOnly() {
-        (UIApplication.shared.delegate as! AppDelegate).window?.close()
+        //(UIApplication.shared.delegate as! AppDelegate).window?.close()
+        self.registVC?.dismiss(animated: true, completion: nil)
     }
 }

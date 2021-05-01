@@ -31,6 +31,7 @@ class MyProfileViewController: UIViewController {
     func bind() {
         settingBarButton.rx.tap.subscribe(onNext: { [unowned self] in
             guard let vc = R.storyboard.myPage.settingNVC() else { return }
+            vc.modalPresentationStyle = .overFullScreen
             self.present(vc, animated: true, completion: nil)
         }).disposed(by: rx.disposeBag)
 
@@ -180,6 +181,9 @@ extension MyProfileViewController : UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            return 
+        }
         let vc = R.storyboard.article.articleListViewController()!
         let bool = self.navigationController?.topViewController is ArticleListViewController
         if !bool {

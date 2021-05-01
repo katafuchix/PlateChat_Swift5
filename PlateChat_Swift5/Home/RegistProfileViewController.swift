@@ -110,7 +110,9 @@ class RegistProfileViewController: UIViewController {
                     self?.showAlert("Error!")
                     return
                 } else {
-                    self?.delegate?.closeRegist()
+                    self?.dismiss(animated: true, completion: {
+                        self?.delegate?.closeRegist()
+                    })
                 }
             })
         }).disposed(by: rx.disposeBag)
@@ -179,7 +181,7 @@ class RegistProfileViewController: UIViewController {
             default:
                 break
             }
-            }.disposed(by: rx.disposeBag)
+        }.disposed(by: rx.disposeBag)
 
     }
 
@@ -301,10 +303,13 @@ class RegistProfileViewController: UIViewController {
 
 extension RegistProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // 写真が選択された時に呼ばれる
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
-        let avatar = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage
+    //func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        //let avatar = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.editedImage.rawValue) ?? <#default value#>] as? UIImage
         //self.profileImageButton.setImage(avatar, for: .normal)
-        if let image = avatar {
+        //if let image = avatar {
+        if let image = info[.editedImage] as? UIImage {
             self.uploadImage(image)
         }
         // 前の画面に戻る

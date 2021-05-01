@@ -53,7 +53,7 @@ class ArticleListViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
 
         self.articleService = ArticleService()
-        if self.article.parentKey != "" {
+        if self.article != nil && self.article.parentKey != "" {
             self.observeArticle( true )
             // ページング
             tableView.rx.willDisplayCell.subscribe(onNext: { [unowned self] (cell, indexPath) in

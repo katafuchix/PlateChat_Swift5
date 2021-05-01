@@ -10,6 +10,7 @@ import Firebase
 import FirebaseCrashlytics
 import UserNotifications
 import IQKeyboardManagerSwift
+import SVProgressHUD
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -73,6 +74,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //キーボードの上の、next/prev/doneボタン
         IQKeyboardManager.shared.enable = true
+        
+        SVProgressHUD.setOffsetFromCenter(
+            UIOffset(horizontal: UIScreen.main.bounds.width/2,
+                       vertical: UIScreen.main.bounds.height/2)
+        )
         
         return true
     }
