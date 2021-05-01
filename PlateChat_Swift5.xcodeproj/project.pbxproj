@@ -1187,7 +1187,7 @@
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1209,7 +1209,7 @@
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1287,7 +1287,7 @@
 				PRODUCT_NAME = "P-Chat!";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRODUCTION;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Production;
 		};

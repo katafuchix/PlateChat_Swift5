@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "318DC5EB263D12DC00966BAF"
-               BuildableName = "PlateChat_Swift5.app"
+               BuildableName = "P-Chat!.app"
                BlueprintName = "PlateChat_Swift5"
                ReferencedContainer = "container:PlateChat_Swift5.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "318DC5EB263D12DC00966BAF"
-            BuildableName = "PlateChat_Swift5.app"
+            BuildableName = "P-Chat!.app"
             BlueprintName = "PlateChat_Swift5"
             ReferencedContainer = "container:PlateChat_Swift5.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "318DC5EB263D12DC00966BAF"
-            BuildableName = "PlateChat_Swift5.app"
+            BuildableName = "P-Chat!.app"
             BlueprintName = "PlateChat_Swift5"
             ReferencedContainer = "container:PlateChat_Swift5.xcodeproj">
          </BuildableReference>

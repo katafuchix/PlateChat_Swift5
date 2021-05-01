@@ -39,6 +39,7 @@ class HomeViewController: UIViewController {
             let vc = R.storyboard.rule.ruleViewController()!
             vc.delegate = self
             let nc = UINavigationController(rootViewController: vc)
+            nc.modalPresentationStyle = .fullScreen
             self.present(nc, animated: true, completion: nil)
         } else {
             self.checkProfile()
