@@ -48,13 +48,20 @@ extension UIWindow {
         addSubview(root.view)
 
         let delegate = UIApplication.shared.delegate as! AppDelegate
-        if _windowStack.count == 0 {
+        /*if _windowStack.count == 0 {
             _windowStack.append(delegate.window!)
+        }*/
+        
+        let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
+        if _windowStack.count == 0 {
+            _windowStack.append(sceneDelegate.window!)
         }
+        
 
-        let nowWindow = delegate.window
+        //let nowWindow = delegate.window
+        let nowWindow = sceneDelegate.window
         nowWindow?.rootViewController?.viewWillDisappear(true)
-
+        
         _windowStack.append(self)
         delegate.window = self
         self.makeKeyAndVisible()

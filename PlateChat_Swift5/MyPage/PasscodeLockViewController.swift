@@ -72,7 +72,8 @@ class PasscodeLockViewController: UIViewController {
 
         if AccountData.isShowingPasscordLockView {
             let vc = CustomTHPinViewController(delegate: self)
-            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .fullScreen
+            //vc.modalTransitionStyle = .crossDissolve
             self.present(vc, animated: true, completion: nil)
 
         } else {
@@ -81,13 +82,15 @@ class PasscodeLockViewController: UIViewController {
     }
 
     private func close() {
-        if let w = AppDelegate.appDelegate?.passcodeWindow {
+        self.dismiss(animated: true, completion: nil)
+        /*if let w = AppDelegate.appDelegate?.passcodeWindow {
             w.close()
             AccountData.isShowingPasscordLockView = false
-            AppDelegate.appDelegate?.passcodeWindow = nil
+            //AppDelegate.appDelegate?.passcodeWindow = nil
+            self.dismiss(animated: true, completion: nil)
         } else {
             self.dismiss(animated: true, completion: nil)
-        }
+        }*/
     }
 }
 
@@ -101,8 +104,8 @@ extension PasscodeLockViewController: THPinViewControllerDelegate {
         guard pin == AccountData.passcode else {
             return false
         }
-
         AccountData.isShowingPasscordLockView = false
+        self.close()
         return true
     }
 

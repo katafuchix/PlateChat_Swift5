@@ -90,10 +90,10 @@ class SettingTableViewController: UITableViewController {
             .drive(onNext: { [weak self] value in
                 if value {
                     let nvc = R.storyboard.newPasscodeInput.newPasscodeNVC()!
+                    nvc.modalPresentationStyle = .fullScreen
                     if let vc = nvc.viewControllers.first as? NewPasscodeInputViewController {
                         vc.delegate = vc
                         vc.parentNavigationController = nvc
-                        vc.modalPresentationStyle = .overFullScreen
                         vc.completion = { (isSuccess, pin) in
                             self?.passcodeSwitch.isOn = isSuccess
                             if !isSuccess {

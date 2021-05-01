@@ -36,7 +36,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
+        //NotificationCenter.default.addObserver(self, selector: #selector(self.displayPasscodeLockScreenIfNeeded), name: UIApplication.didFinishLaunchingNotification, object: nil)
+        self.displayPasscodeLockScreenIfNeeded()
+        
         if (AccountData.isFirst) {
             let vc = R.storyboard.rule.ruleViewController()!
             vc.delegate = self
@@ -88,6 +90,16 @@ class HomeViewController: UIViewController {
 
         self.tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(HomeViewController.refresh(sender:)), for: .valueChanged)
+    }
+    
+    // アプリ起動時のみ実行
+    @objc private func displayPasscodeLockScreenIfNeeded() {
+        // パスコードが設定されていればパスコード画面を出す
+        if let pass = AccountData.passcode, !pass.isEmpty, !AccountData.isShowingPasscordLockView {
+            let nav = R.storyboard.passcodeLock.passcodeLockViewController()!
+            nav.modalPresentationStyle = .overFullScreen
+            self.present(nav, animated: false, completion: nil)
+        }
     }
 
     @objc func refresh(sender: UIRefreshControl) {

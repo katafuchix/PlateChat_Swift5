@@ -66,12 +66,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // パスコード画面表示状態のチェック用パラメータをリセット
         AccountData.isShowingPasscordLockView = false
 
-        // パスコードロック画面オープン
-        self.openPasscodeLock()
-
         // for ImagePicker
         RxImagePickerDelegateProxy.register { RxImagePickerDelegateProxy(imagePicker: $0) }
 
+        // パスコードロック画面オープン
+        //self.openPasscodeLock()
+        
         //キーボードの上の、next/prev/doneボタン
         IQKeyboardManager.shared.enable = true
         
@@ -80,9 +80,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                        vertical: UIScreen.main.bounds.height/2)
         )
         
+        // iOS 13以降はデフォルトの処理が効かないのでこうする
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillResignActive(_:)), name: UIScene.willDeactivateNotification, object: nil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive(_:)), name: UIScene.didActivateNotification, object: nil)
+        
         return true
     }
-
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -97,6 +102,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    @objc func appWillResignActive(_ application: UIApplication) {
+        //AccountData.refreshTokenData()
+        
+        // パスコード画面オープン
+        openPasscodeLock()
+    }
+    
+    @objc func appDidBecomeActive(_ application: UIApplication) {
+        //AccountData.refreshTokenData()
+        
+        //バッチを消す
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        // Block
+        if let uid = Auth.auth().currentUser?.uid {
+            UserBlockService.syncBlockUser(completionHandler: { (_,_) in })
+            UserBlockedService.syncBlockedUser(uid, completionHandler: { (_,_) in })
+        }
+    }
+    
     // チャット一覧のバッヂ
     func showChatUnreadCount( _ value: String ) {
         guard let rootVC = self.window?.rootViewController else { return }
@@ -107,15 +131,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func openPasscodeLock() {
-        /*
         // パスコードが設定されていればパスコード画面を出す
         if let pass = AccountData.passcode, !pass.isEmpty, !AccountData.isShowingPasscordLockView {
-            self.passcodeWindow = UIWindow.createNewWindow(
+            /*self.passcodeWindow = UIWindow.createNewWindow(
                 R.storyboard.passcodeLock.passcodeLockViewController()!
             )
-            self.passcodeWindow?.open()
+            self.passcodeWindow?.open()*/
+            
+            if let rootViewController = UIApplication.shared.keyWindow?.rootViewController {
+                // 現在のrootViewControllerにおいて一番上に表示されているViewControllerを取得する
+                var topViewController: UIViewController = rootViewController
+                while let presentedViewController = topViewController.presentedViewController {
+                    topViewController = presentedViewController
+                }
+
+                // すでにパスコードロック画面がかぶせてあるかを確認する
+                let isDisplayedPasscodeLock: Bool = topViewController.children.map{
+                    return $0 is PasscodeLockViewController
+                }.contains(true)
+
+                // パスコードロック画面がかぶせてなければかぶせる
+                if !isDisplayedPasscodeLock {
+                    let nav = R.storyboard.passcodeLock.passcodeLockViewController()!
+                    nav.modalPresentationStyle = .overFullScreen
+                    nav.modalTransitionStyle   = .crossDissolve
+                    topViewController.present(nav, animated: false, completion: nil)
+                }
+            }
         }
- */
+
     }
 }
-
