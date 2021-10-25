@@ -32,7 +32,7 @@ target 'PlateChat_Swift5' do
   #pod 'PageMenu'
   #pod "PagingMenuController"
   pod 'SVProgressHUD', '2.0'
-  pod 'NVActivityIndicatorView', '4.3.0'
+  #pod 'NVActivityIndicatorView'#, '4.3.0'
   pod 'SDWebImage', '4.3.3'
   pod 'DZNEmptyDataSet'
   #pod 'Nuke', '~> 6.0'

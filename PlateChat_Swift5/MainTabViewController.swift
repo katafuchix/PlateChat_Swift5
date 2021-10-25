@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import NVActivityIndicatorView
+//import NVActivityIndicatorView
 import SVProgressHUD
 import Firebase
 

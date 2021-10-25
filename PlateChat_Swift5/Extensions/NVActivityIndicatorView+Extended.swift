@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/*
 import NVActivityIndicatorView
 import SVProgressHUD
 
@@ -60,3 +60,4 @@ extension NVActivityIndicatorView {
         }
     }
 }
+*/
