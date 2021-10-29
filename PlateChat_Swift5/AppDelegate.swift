@@ -60,6 +60,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIButton.appearance(whenContainedInInstancesOf: [UINavigationController.self]).tintColor = .white
 
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = R.color.main()!
+            appearance.titleTextAttributes = [
+                NSAttributedString.Key.font: R.font.notoSansCJKjpSubBold(size: 15.0)!,
+                .foregroundColor: UIColor.white]
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
+        
         // 通知用処理
         self.notification.requestAuthorization()
 
