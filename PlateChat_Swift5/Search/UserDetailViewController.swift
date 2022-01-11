@@ -171,6 +171,9 @@ class UserDetailViewController: UIViewController {
         self.networkChecking()
         self.tableView.reloadData()
         self.observeArticle()
+        
+        self.setStatusBarBackgroundColor()
+        self.setAppearance()
     }
 
     func observeArticle() {

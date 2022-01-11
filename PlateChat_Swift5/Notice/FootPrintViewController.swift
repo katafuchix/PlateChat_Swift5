@@ -39,6 +39,9 @@ class FootPrintViewController: UIViewController, IndicatorInfoProvider {
         super.viewWillAppear(animated)
         self.networkChecking()
         self.observeFootprint()
+        
+        self.setStatusBarBackgroundColor()
+        self.setAppearance()
     }
 
     func observeFootprint() {

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3152D24B272C273E00C959EA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3152D24A272C273E00C959EA /* AdSupport.framework */; };
+		3152D24D272C274700C959EA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3152D24C272C274700C959EA /* SystemConfiguration.framework */; };
+		3152D24F272C275E00C959EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3152D24E272C275E00C959EA /* CoreLocation.framework */; };
+		3152D251272C276C00C959EA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3152D250272C276C00C959EA /* WebKit.framework */; };
+		3152D253272C278900C959EA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3152D252272C278900C959EA /* StoreKit.framework */; };
+		3152D255272C28EF00C959EA /* ImobileSdkAds-Bridging-Header.h in Resources */ = {isa = PBXBuildFile; fileRef = 3152D245272C256600C959EA /* ImobileSdkAds-Bridging-Header.h */; };
+		3152D257272C2AE400C959EA /* ImobileSdkAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3152D256272C2AE400C959EA /* ImobileSdkAds.framework */; };
 		318DC5F0263D12DC00966BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DC5EF263D12DC00966BAF /* AppDelegate.swift */; };
 		318DC5F2263D12DC00966BAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DC5F1263D12DC00966BAF /* SceneDelegate.swift */; };
 		318DC5F4263D12DC00966BAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DC5F3263D12DC00966BAF /* ViewController.swift */; };
@@ -175,6 +182,14 @@
 		29549607CEF9306AFF91E578 /* Pods-PlateChat_Swift5.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlateChat_Swift5.production.xcconfig"; path = "Target Support Files/Pods-PlateChat_Swift5/Pods-PlateChat_Swift5.production.xcconfig"; sourceTree = "<group>"; };
 		2BB5AC9D60D8FFF80A0F816A /* Pods-PlateChat_Swift5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlateChat_Swift5.release.xcconfig"; path = "Target Support Files/Pods-PlateChat_Swift5/Pods-PlateChat_Swift5.release.xcconfig"; sourceTree = "<group>"; };
 		3138D1BA263D32D800EFA3DC /* P-Chat!.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "P-Chat!.entitlements"; sourceTree = "<group>"; };
+		3152D245272C256600C959EA /* ImobileSdkAds-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImobileSdkAds-Bridging-Header.h"; sourceTree = "<group>"; };
+		3152D246272C272100C959EA /* libAdapterIMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterIMobile.a; sourceTree = "<group>"; };
+		3152D24A272C273E00C959EA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		3152D24C272C274700C959EA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3152D24E272C275E00C959EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3152D250272C276C00C959EA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3152D252272C278900C959EA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3152D256272C2AE400C959EA /* ImobileSdkAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImobileSdkAds.framework; sourceTree = "<group>"; };
 		318DC5EC263D12DC00966BAF /* P-Chat!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P-Chat!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318DC5EF263D12DC00966BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318DC5F1263D12DC00966BAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -347,7 +362,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3152D253272C278900C959EA /* StoreKit.framework in Frameworks */,
+				3152D251272C276C00C959EA /* WebKit.framework in Frameworks */,
+				3152D24F272C275E00C959EA /* CoreLocation.framework in Frameworks */,
+				3152D24D272C274700C959EA /* SystemConfiguration.framework in Frameworks */,
+				3152D24B272C273E00C959EA /* AdSupport.framework in Frameworks */,
 				94F1DE1B6C84C62B4C9E17AB /* Pods_PlateChat_Swift5.framework in Frameworks */,
+				3152D257272C2AE400C959EA /* ImobileSdkAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +383,16 @@
 				29549607CEF9306AFF91E578 /* Pods-PlateChat_Swift5.production.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3152D244272C254F00C959EA /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				3152D256272C2AE400C959EA /* ImobileSdkAds.framework */,
+				3152D246272C272100C959EA /* libAdapterIMobile.a */,
+				3152D245272C256600C959EA /* ImobileSdkAds-Bridging-Header.h */,
+			);
+			path = libs;
 			sourceTree = "<group>";
 		};
 		318DC5E3263D12DC00966BAF = {
@@ -386,6 +417,7 @@
 		318DC5EE263D12DC00966BAF /* PlateChat_Swift5 */ = {
 			isa = PBXGroup;
 			children = (
+				3152D244272C254F00C959EA /* libs */,
 				3138D1BA263D32D800EFA3DC /* P-Chat!.entitlements */,
 				318DC606263D15F900966BAF /* Extensions */,
 				318DC669263D17B600966BAF /* Model */,
@@ -732,6 +764,11 @@
 		CAA784BFBC664D30483C5B3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3152D252272C278900C959EA /* StoreKit.framework */,
+				3152D250272C276C00C959EA /* WebKit.framework */,
+				3152D24E272C275E00C959EA /* CoreLocation.framework */,
+				3152D24C272C274700C959EA /* SystemConfiguration.framework */,
+				3152D24A272C273E00C959EA /* AdSupport.framework */,
 				A31E2F1BEA20552C5560A572 /* Pods_PlateChat_Swift5.framework */,
 			);
 			name = Frameworks;
@@ -797,6 +834,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3152D255272C28EF00C959EA /* ImobileSdkAds-Bridging-Header.h in Resources */,
 				318DC6D1263D1A6E00966BAF /* icon_167.png in Resources */,
 				318DC72E263D1ACA00966BAF /* BlockList.storyboard in Resources */,
 				318DC73B263D1ACA00966BAF /* NoticeTableViewCell.xib in Resources */,
@@ -1182,15 +1220,25 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = U5LW6HVD99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
+				);
 				INFOPLIST_FILE = PlateChat_Swift5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
+				);
 				MARKETING_VERSION = 1.19;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.PlateChat-dev";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlateChat_Swift5/libs/ImobileSdkAds-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1207,15 +1255,25 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = U5LW6HVD99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
+				);
 				INFOPLIST_FILE = PlateChat_Swift5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
+				);
 				MARKETING_VERSION = 1.19;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.p-chat";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlateChat_Swift5/libs/ImobileSdkAds-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1287,16 +1345,26 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = U5LW6HVD99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
+				);
 				INFOPLIST_FILE = PlateChat_Swift5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
 				);
 				MARKETING_VERSION = 1.19;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.p-chat";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRODUCTION;
+				SWIFT_OBJC_BRIDGING_HEADER = "PlateChat_Swift5/libs/ImobileSdkAds-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

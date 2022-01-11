@@ -91,3 +91,57 @@ extension UIViewController {
         }
     }
 }
+
+
+extension UIViewController {
+    private final class StatusBarView: UIView { }
+
+    func setStatusBarBackgroundColor() {
+        for subView in self.view.subviews where subView is StatusBarView {
+            subView.removeFromSuperview()
+        }
+        let statusBarView = StatusBarView()
+        statusBarView.backgroundColor = R.color.main()!
+        self.view.addSubview(statusBarView)
+        statusBarView.translatesAutoresizingMaskIntoConstraints = false
+        statusBarView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        statusBarView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        statusBarView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        statusBarView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+    }
+    
+    func setAppearance() {
+        //UITabBar.appearance().barTintColor = UIColor.hexStr(hexStr: "#40e0d0", alpha: 1.0)
+        //ナビゲーションアイテムの色を変更
+        UINavigationBar.appearance().tintColor = UIColor.white
+        //ナビゲーションバーの背景を変更
+        UINavigationBar.appearance().barTintColor = R.color.main()! //UIColor.hexStr(hexStr: color as NSString, alpha: 1.0)
+        //ナビゲーションのタイトル文字列の色を変更
+        UINavigationBar.appearance().titleTextAttributes = [
+            //NSAttributedString.Key.font: R.font.notoSansCJKjpSubBold(size: 15.0)!,
+            .foregroundColor: UIColor.white]
+        // remove bottom shadow
+        UINavigationBar.appearance().shadowImage = UIImage()
+        //UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
+        UIButton.appearance(whenContainedInInstancesOf: [UINavigationController.self]).tintColor = .white
+
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = R.color.main()!
+            appearance.titleTextAttributes = [
+                //NSAttributedString.Key.font: R.font.notoSansCJKjpSubBold(size: 15.0)!,
+                .foregroundColor: UIColor.white]
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
+        
+        self.navigationController?.navigationBar.barTintColor = R.color.main()! // その他UIColor.white等好きな背景色
+        // ナビゲーションバーのアイテムの色　（戻る　＜　とか　読み込みゲージとか）
+        self.navigationController?.navigationBar.tintColor = .white
+        // ナビゲーションバーのテキストを変更する
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            // 文字の色
+            .foregroundColor: UIColor.white
+        ]
+    }
+}

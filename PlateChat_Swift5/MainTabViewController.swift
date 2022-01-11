@@ -48,6 +48,13 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
         item.badgeValue = nil
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.setStatusBarBackgroundColor()
+        self.setAppearance()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 

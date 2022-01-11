@@ -38,6 +38,9 @@ class ChatRoomListViewController: UIViewController {
         self.networkChecking()
         self.chatRoomService = ChatRoomService()
         self.observeChatRoomLIst()
+        
+        self.setStatusBarBackgroundColor()
+        self.setAppearance()
     }
 
     func observeChatRoomLIst() {

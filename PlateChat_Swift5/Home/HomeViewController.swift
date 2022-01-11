@@ -21,7 +21,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var writeButton: UIBarButtonItem!
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var adBaseView: UIView!
+    
     var articleService: ArticleService?
     var articles = [Article]()
     var articles_org = [Article]()
@@ -32,6 +33,10 @@ class HomeViewController: UIViewController {
 
     var registVC: RegistProfileViewController? = nil
     var writeVC: WriteViewController? = nil
+    
+    let IMOBILE_BANNER_PID = "4323"
+    let IMOBILE_BANNER_MID = "494993"
+    let IMOBILE_BANNER_SID = "1766255"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +97,38 @@ class HomeViewController: UIViewController {
 
         self.tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(HomeViewController.refresh(sender:)), for: .valueChanged)
+        
+        
+        // スポット情報を設定します
+        ImobileSdkAds.register(withPublisherID: IMOBILE_BANNER_PID, mediaID:IMOBILE_BANNER_MID, spotID:IMOBILE_BANNER_SID)
+        // 広告の取得を開始します
+        ImobileSdkAds.start(bySpotID: IMOBILE_BANNER_SID)
+        
+        // 表示する広告のサイズ
+        let imobileAdSize = CGSize(width: 320, height: 50)
+        // デバイスの画面サイズ
+        let screenSize = UIScreen.main.bounds.size
+        
+        // 広告の表示位置を算出(画面中央下)
+        let imobileAdPosX: CGFloat = (screenSize.width - imobileAdSize.width) / 2
+        /*var imobileAdPosY: CGFloat = screenSize.height - imobileAdSize.height
+
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.keyWindow;
+            //CGFloat topPadding = window.safeAreaInsets.top;
+            let bottomPadding: CGFloat = window?.safeAreaInsets.bottom ?? 0.0
+            imobileAdPosY = screenSize.height - imobileAdSize.height - bottomPadding ;
+        }*/
+
+        // 広告を表示するViewを作成します
+        //let imobileAdView = UIView(frame: CGRect(x: imobileAdPosX, y: imobileAdPosY, width: imobileAdSize.width, height: imobileAdSize.height))
+        let imobileAdView = UIView(frame: CGRect(x: imobileAdPosX, y: 0, width: imobileAdSize.width, height: imobileAdSize.height))
+        //imobileAdView.backgroundColor = .red
+        //広告を表示するViewをViewControllerに追加します
+        self.adBaseView.addSubview(imobileAdView)
+        //imobileAdView.center = self.adBaseView.center
+        // 広告を表示します
+        ImobileSdkAds.show(bySpotID: IMOBILE_BANNER_SID, view: imobileAdView)
     }
     
     // アプリ起動時のみ実行
@@ -183,6 +220,9 @@ class HomeViewController: UIViewController {
         
         self.filterBlock()
         self.tableView.reloadData()
+        
+        self.setStatusBarBackgroundColor()
+        self.setAppearance()
     }
 
     override func didReceiveMemoryWarning() {

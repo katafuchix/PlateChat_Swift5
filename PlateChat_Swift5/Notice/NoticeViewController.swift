@@ -46,7 +46,14 @@ class NoticeViewController: SegmentedPagerTabStripViewController {
             //NoticeViewController.pv2.observeArticleReplyLog()
         }).disposed(by: rx.disposeBag)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.setStatusBarBackgroundColor()
+        self.setAppearance()
+    }
+    
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
 
         let pv1 = NoticeViewController.pv1

@@ -38,6 +38,9 @@ class ArticleReplyLogViewController: UIViewController, IndicatorInfoProvider {
         super.viewWillAppear(animated)
         self.networkChecking()
         self.observeArticleReplyLog()
+        
+        self.setStatusBarBackgroundColor()
+        self.setAppearance()
     }
 
     func observeArticleReplyLog() {

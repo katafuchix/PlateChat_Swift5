@@ -16,7 +16,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var collectionTypeButton: UIBarButtonItem!
-
+    @IBOutlet weak var adBaseView: UIView!
+    
     var userService: UserService?
     var users = [LoginUser]()
     var users_org = [LoginUser]()
@@ -24,6 +25,10 @@ class SearchViewController: UIViewController {
     
     var searchWindowVC: SearchWindowViewController? = nil
 
+    let IMOBILE_BANNER_PID = "4323"
+    let IMOBILE_BANNER_MID = "494993"
+    let IMOBILE_BANNER_SID = "1766255"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +44,28 @@ class SearchViewController: UIViewController {
         self.observeUser()
 
         self.bind()
+        
+        
+        // スポット情報を設定します
+        ImobileSdkAds.register(withPublisherID: IMOBILE_BANNER_PID, mediaID:IMOBILE_BANNER_MID, spotID:IMOBILE_BANNER_SID)
+        // 広告の取得を開始します
+        ImobileSdkAds.start(bySpotID: IMOBILE_BANNER_SID)
+        
+        // 表示する広告のサイズ
+        let imobileAdSize = CGSize(width: 320, height: 50)
+        // デバイスの画面サイズ
+        let screenSize = UIScreen.main.bounds.size
+        
+        // 広告の表示位置を算出(画面中央下)
+        let imobileAdPosX: CGFloat = (screenSize.width - imobileAdSize.width) / 2
+
+        // 広告を表示するViewを作成します
+        let imobileAdView = UIView(frame: CGRect(x: imobileAdPosX, y: 0, width: imobileAdSize.width, height: imobileAdSize.height))
+        //imobileAdView.backgroundColor = .red
+        //広告を表示するViewをViewControllerに追加します
+        self.adBaseView.addSubview(imobileAdView)
+        // 広告を表示します
+        ImobileSdkAds.show(bySpotID: IMOBILE_BANNER_SID, view: imobileAdView)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +78,8 @@ class SearchViewController: UIViewController {
                 self.collectionTypeButton.image = R.image.grid()
             }
         }
+        self.setStatusBarBackgroundColor()
+        self.setAppearance()
     }
 
     func bind() {

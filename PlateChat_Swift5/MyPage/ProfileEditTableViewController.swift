@@ -60,6 +60,9 @@ class ProfileEditTableViewController: UITableViewController {
         self.networkChecking()
         self.setUserData()
         self.tableView.reloadData()
+        
+        self.setStatusBarBackgroundColor()
+        self.setAppearance()
     }
 
     func setUserData() {

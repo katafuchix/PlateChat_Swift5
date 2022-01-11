@@ -18,14 +18,41 @@ class MyProfileViewController: UIViewController {
 
     @IBOutlet weak var settingBarButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var adBaseView: UIView!
+    
     var articleService: ArticleService?
     var articles = [Article]()
 
+    let IMOBILE_BANNER_PID = "4323"
+    let IMOBILE_BANNER_MID = "494993"
+    let IMOBILE_BANNER_SID = "1766255"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.bind()
+        
+        // スポット情報を設定します
+        ImobileSdkAds.register(withPublisherID: IMOBILE_BANNER_PID, mediaID:IMOBILE_BANNER_MID, spotID:IMOBILE_BANNER_SID)
+        // 広告の取得を開始します
+        ImobileSdkAds.start(bySpotID: IMOBILE_BANNER_SID)
+        
+        // 表示する広告のサイズ
+        let imobileAdSize = CGSize(width: 320, height: 50)
+        // デバイスの画面サイズ
+        let screenSize = UIScreen.main.bounds.size
+        
+        // 広告の表示位置を算出(画面中央下)
+        let imobileAdPosX: CGFloat = (screenSize.width - imobileAdSize.width) / 2
+
+        // 広告を表示するViewを作成します
+        let imobileAdView = UIView(frame: CGRect(x: imobileAdPosX, y: 0, width: imobileAdSize.width, height: imobileAdSize.height))
+        //imobileAdView.backgroundColor = .red
+        //広告を表示するViewをViewControllerに追加します
+        self.adBaseView.addSubview(imobileAdView)
+        // 広告を表示します
+        ImobileSdkAds.show(bySpotID: IMOBILE_BANNER_SID, view: imobileAdView)
     }
 
     func bind() {
@@ -60,6 +87,8 @@ class MyProfileViewController: UIViewController {
         if self.articles.count == 0 {
             self.observeArticle()
         }
+        self.setStatusBarBackgroundColor()
+        self.setAppearance()
     }
 
     func observeArticle() {
