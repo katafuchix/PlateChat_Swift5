@@ -1233,7 +1233,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
 				);
-				MARKETING_VERSION = 1.19;
+				MARKETING_VERSION = 1.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.PlateChat-dev";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
@@ -1268,7 +1268,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
 				);
-				MARKETING_VERSION = 1.19;
+				MARKETING_VERSION = 1.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.p-chat";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
@@ -1358,7 +1358,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
 				);
-				MARKETING_VERSION = 1.19;
+				MARKETING_VERSION = 1.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.p-chat";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
