@@ -16,7 +16,7 @@ import SwiftDate
 import SafariServices
 //import Nuke
 import Rswift
-import SKPhotoBrowser
+//import SKPhotoBrowser
 import SVProgressHUD
 
 fileprivate extension UIEdgeInsets {

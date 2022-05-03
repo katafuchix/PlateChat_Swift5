@@ -16,3 +16,5 @@
 //#import "GADBannerViewDelegate.h"
 
 #endif /* ImobileSdkAds_Bridging_Header_h */
+
+#import "SKPhotoBrowser.h"

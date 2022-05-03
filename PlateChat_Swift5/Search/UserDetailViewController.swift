@@ -13,7 +13,7 @@ import RxCocoa
 import NSObject_Rx
 import Rswift
 import SVProgressHUD
-import SKPhotoBrowser
+//import SKPhotoBrowser
 
 enum UserMenu {
     case block

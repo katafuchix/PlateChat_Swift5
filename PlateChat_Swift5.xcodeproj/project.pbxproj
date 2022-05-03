@@ -175,6 +175,30 @@
 		318DC767263D1AE600966BAF /* ChatMessageKitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DC760263D1AE600966BAF /* ChatMessageKitCell.swift */; };
 		318DC768263D1AE600966BAF /* ChatRoomListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DC761263D1AE600966BAF /* ChatRoomListCell.swift */; };
 		318DC76A263D1BB300966BAF /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DC769263D1BB300966BAF /* MainTabViewController.swift */; };
+		31BA57262820EED600316600 /* SKPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA570C2820EED600316600 /* SKPhotoBrowser.swift */; };
+		31BA57272820EED600316600 /* SKMesurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA570D2820EED600316600 /* SKMesurement.swift */; };
+		31BA57282820EED600316600 /* SKZoomingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA570E2820EED600316600 /* SKZoomingScrollView.swift */; };
+		31BA57292820EED600316600 /* SKPaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA570F2820EED600316600 /* SKPaginationView.swift */; };
+		31BA572A2820EED600316600 /* SKIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57102820EED600316600 /* SKIndicatorView.swift */; };
+		31BA572B2820EED600316600 /* SKAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57112820EED600316600 /* SKAnimator.swift */; };
+		31BA572C2820EED600316600 /* SKPhotoBrowserOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57122820EED600316600 /* SKPhotoBrowserOptions.swift */; };
+		31BA572D2820EED600316600 /* SKDetectingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57132820EED600316600 /* SKDetectingImageView.swift */; };
+		31BA572E2820EED600316600 /* SKPagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57142820EED600316600 /* SKPagingScrollView.swift */; };
+		31BA572F2820EED600316600 /* SKDetectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57152820EED600316600 /* SKDetectingView.swift */; };
+		31BA57302820EED600316600 /* SKCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57162820EED600316600 /* SKCache.swift */; };
+		31BA57312820EED600316600 /* UIApplication+UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57182820EED600316600 /* UIApplication+UIWindow.swift */; };
+		31BA57322820EED600316600 /* UIImage+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA571A2820EED600316600 /* UIImage+Rotation.swift */; };
+		31BA57332820EED600316600 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA571B2820EED600316600 /* UIView+Radius.swift */; };
+		31BA57342820EED600316600 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA571C2820EED600316600 /* UIImage+animatedGIF.m */; };
+		31BA57352820EED600316600 /* SKCaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA571D2820EED600316600 /* SKCaptionView.swift */; };
+		31BA57362820EED600316600 /* SKLocalPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA571E2820EED600316600 /* SKLocalPhoto.swift */; };
+		31BA57372820EED600316600 /* SKPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA571F2820EED600316600 /* SKPhoto.swift */; };
+		31BA57382820EED600316600 /* SKActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57202820EED600316600 /* SKActionView.swift */; };
+		31BA57392820EED600316600 /* SKToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57212820EED600316600 /* SKToolbar.swift */; };
+		31BA573A2820EED600316600 /* SKPhotoBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57222820EED600316600 /* SKPhotoBrowserDelegate.swift */; };
+		31BA573B2820EED600316600 /* SKCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57232820EED600316600 /* SKCacheable.swift */; };
+		31BA573C2820EED600316600 /* SKPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31BA57242820EED600316600 /* SKPhotoBrowser.bundle */; };
+		31BA573D2820EED600316600 /* SKButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BA57252820EED600316600 /* SKButtons.swift */; };
 		94F1DE1B6C84C62B4C9E17AB /* Pods_PlateChat_Swift5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31E2F1BEA20552C5560A572 /* Pods_PlateChat_Swift5.framework */; };
 /* End PBXBuildFile section */
 
@@ -353,6 +377,32 @@
 		318DC760263D1AE600966BAF /* ChatMessageKitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageKitCell.swift; sourceTree = "<group>"; };
 		318DC761263D1AE600966BAF /* ChatRoomListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomListCell.swift; sourceTree = "<group>"; };
 		318DC769263D1BB300966BAF /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		31BA570B2820EED600316600 /* SKPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPhotoBrowser.h; sourceTree = "<group>"; };
+		31BA570C2820EED600316600 /* SKPhotoBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhotoBrowser.swift; sourceTree = "<group>"; };
+		31BA570D2820EED600316600 /* SKMesurement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMesurement.swift; sourceTree = "<group>"; };
+		31BA570E2820EED600316600 /* SKZoomingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKZoomingScrollView.swift; sourceTree = "<group>"; };
+		31BA570F2820EED600316600 /* SKPaginationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPaginationView.swift; sourceTree = "<group>"; };
+		31BA57102820EED600316600 /* SKIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKIndicatorView.swift; sourceTree = "<group>"; };
+		31BA57112820EED600316600 /* SKAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKAnimator.swift; sourceTree = "<group>"; };
+		31BA57122820EED600316600 /* SKPhotoBrowserOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhotoBrowserOptions.swift; sourceTree = "<group>"; };
+		31BA57132820EED600316600 /* SKDetectingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKDetectingImageView.swift; sourceTree = "<group>"; };
+		31BA57142820EED600316600 /* SKPagingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPagingScrollView.swift; sourceTree = "<group>"; };
+		31BA57152820EED600316600 /* SKDetectingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKDetectingView.swift; sourceTree = "<group>"; };
+		31BA57162820EED600316600 /* SKCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCache.swift; sourceTree = "<group>"; };
+		31BA57182820EED600316600 /* UIApplication+UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+UIWindow.swift"; sourceTree = "<group>"; };
+		31BA57192820EED600316600 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		31BA571A2820EED600316600 /* UIImage+Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotation.swift"; sourceTree = "<group>"; };
+		31BA571B2820EED600316600 /* UIView+Radius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
+		31BA571C2820EED600316600 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		31BA571D2820EED600316600 /* SKCaptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCaptionView.swift; sourceTree = "<group>"; };
+		31BA571E2820EED600316600 /* SKLocalPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLocalPhoto.swift; sourceTree = "<group>"; };
+		31BA571F2820EED600316600 /* SKPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhoto.swift; sourceTree = "<group>"; };
+		31BA57202820EED600316600 /* SKActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKActionView.swift; sourceTree = "<group>"; };
+		31BA57212820EED600316600 /* SKToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKToolbar.swift; sourceTree = "<group>"; };
+		31BA57222820EED600316600 /* SKPhotoBrowserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhotoBrowserDelegate.swift; sourceTree = "<group>"; };
+		31BA57232820EED600316600 /* SKCacheable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCacheable.swift; sourceTree = "<group>"; };
+		31BA57242820EED600316600 /* SKPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SKPhotoBrowser.bundle; sourceTree = "<group>"; };
+		31BA57252820EED600316600 /* SKButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKButtons.swift; sourceTree = "<group>"; };
 		A31E2F1BEA20552C5560A572 /* Pods_PlateChat_Swift5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlateChat_Swift5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52E801A4E1075344A3DDE87 /* Pods-PlateChat_Swift5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlateChat_Swift5.debug.xcconfig"; path = "Target Support Files/Pods-PlateChat_Swift5/Pods-PlateChat_Swift5.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -388,6 +438,7 @@
 		3152D244272C254F00C959EA /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				31BA570A2820EED600316600 /* SKPhotoBrowser */,
 				3152D256272C2AE400C959EA /* ImobileSdkAds.framework */,
 				3152D246272C272100C959EA /* libAdapterIMobile.a */,
 				3152D245272C256600C959EA /* ImobileSdkAds-Bridging-Header.h */,
@@ -761,6 +812,47 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		31BA570A2820EED600316600 /* SKPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				31BA570B2820EED600316600 /* SKPhotoBrowser.h */,
+				31BA570C2820EED600316600 /* SKPhotoBrowser.swift */,
+				31BA570D2820EED600316600 /* SKMesurement.swift */,
+				31BA570E2820EED600316600 /* SKZoomingScrollView.swift */,
+				31BA570F2820EED600316600 /* SKPaginationView.swift */,
+				31BA57102820EED600316600 /* SKIndicatorView.swift */,
+				31BA57112820EED600316600 /* SKAnimator.swift */,
+				31BA57122820EED600316600 /* SKPhotoBrowserOptions.swift */,
+				31BA57132820EED600316600 /* SKDetectingImageView.swift */,
+				31BA57142820EED600316600 /* SKPagingScrollView.swift */,
+				31BA57152820EED600316600 /* SKDetectingView.swift */,
+				31BA57162820EED600316600 /* SKCache.swift */,
+				31BA57172820EED600316600 /* extensions */,
+				31BA571D2820EED600316600 /* SKCaptionView.swift */,
+				31BA571E2820EED600316600 /* SKLocalPhoto.swift */,
+				31BA571F2820EED600316600 /* SKPhoto.swift */,
+				31BA57202820EED600316600 /* SKActionView.swift */,
+				31BA57212820EED600316600 /* SKToolbar.swift */,
+				31BA57222820EED600316600 /* SKPhotoBrowserDelegate.swift */,
+				31BA57232820EED600316600 /* SKCacheable.swift */,
+				31BA57242820EED600316600 /* SKPhotoBrowser.bundle */,
+				31BA57252820EED600316600 /* SKButtons.swift */,
+			);
+			path = SKPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		31BA57172820EED600316600 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				31BA57182820EED600316600 /* UIApplication+UIWindow.swift */,
+				31BA57192820EED600316600 /* UIImage+animatedGIF.h */,
+				31BA571A2820EED600316600 /* UIImage+Rotation.swift */,
+				31BA571B2820EED600316600 /* UIView+Radius.swift */,
+				31BA571C2820EED600316600 /* UIImage+animatedGIF.m */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		CAA784BFBC664D30483C5B3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -870,6 +962,7 @@
 				318DC6D5263D1A8600966BAF /* GoogleService-Info-dev.plist in Resources */,
 				318DC6EE263D1A9700966BAF /* RegistProfile.storyboard in Resources */,
 				318DC71C263D1ACA00966BAF /* Privacy.storyboard in Resources */,
+				31BA573C2820EED600316600 /* SKPhotoBrowser.bundle in Resources */,
 				318DC6CB263D1A6E00966BAF /* icon_120.png in Resources */,
 				318DC6CE263D1A6E00966BAF /* icon_29.png in Resources */,
 				318DC72D263D1ACA00966BAF /* Faq.storyboard in Resources */,
@@ -966,8 +1059,10 @@
 			files = (
 				318DC650263D178B00966BAF /* FootprintService.swift in Sources */,
 				318DC663263D179000966BAF /* PaddingTextField.swift in Sources */,
+				31BA57382820EED600316600 /* SKActionView.swift in Sources */,
 				318DC63D263D165A00966BAF /* PushNotification.swift in Sources */,
 				318DC681263D17B600966BAF /* FirebaseCommon.swift in Sources */,
+				31BA572E2820EED600316600 /* SKPagingScrollView.swift in Sources */,
 				318DC621263D15F900966BAF /* UIAlertController+Extended.swift in Sources */,
 				318DC6ED263D1A9700966BAF /* HomeViewController.swift in Sources */,
 				318DC729263D1ACA00966BAF /* ProfileCell.swift in Sources */,
@@ -975,6 +1070,7 @@
 				318DC721263D1ACA00966BAF /* SettingTableViewController.swift in Sources */,
 				318DC72B263D1ACA00966BAF /* BlockListCell.swift in Sources */,
 				318DC683263D17B600966BAF /* UserSearchData.swift in Sources */,
+				31BA57282820EED600316600 /* SKZoomingScrollView.swift in Sources */,
 				318DC653263D178B00966BAF /* UserBlockService.swift in Sources */,
 				318DC736263D1ACA00966BAF /* FootPrintViewController.swift in Sources */,
 				318DC665263D179000966BAF /* CircleSexButton.swift in Sources */,
@@ -986,8 +1082,10 @@
 				318DC628263D15F900966BAF /* UIWindow+Extended.swift in Sources */,
 				318DC624263D15F900966BAF /* NSObject+Extended.swift in Sources */,
 				318DC64D263D178B00966BAF /* UserService.swift in Sources */,
+				31BA57302820EED600316600 /* SKCache.swift in Sources */,
 				318DC6E6263D1A9700966BAF /* RegistProfileViewModel.swift in Sources */,
 				318DC640263D165A00966BAF /* PhotoRequester.swift in Sources */,
+				31BA57342820EED600316600 /* UIImage+animatedGIF.m in Sources */,
 				318DC6E8263D1A9700966BAF /* WriteViewController.swift in Sources */,
 				318DC6EF263D1A9700966BAF /* HomeViewController+Extended.swift in Sources */,
 				318DC626263D15F900966BAF /* UIColor+Extended.swift in Sources */,
@@ -1002,15 +1100,20 @@
 				318DC74E263D1AD400966BAF /* SearchWindowViewController.swift in Sources */,
 				318DC6F0263D1A9700966BAF /* ArticleTableViewCell.swift in Sources */,
 				318DC5F4263D12DC00966BAF /* ViewController.swift in Sources */,
+				31BA573D2820EED600316600 /* SKButtons.swift in Sources */,
 				318DC61F263D15F900966BAF /* UITableView+Extended.swift in Sources */,
 				318DC62C263D15F900966BAF /* Date+Extended.swift in Sources */,
 				318DC686263D17B600966BAF /* Article.swift in Sources */,
+				31BA57352820EED600316600 /* SKCaptionView.swift in Sources */,
 				318DC67C263D17B600966BAF /* LoginUser.swift in Sources */,
 				318DC757263D1AD400966BAF /* UserDetailViewController.swift in Sources */,
+				31BA57332820EED600316600 /* UIView+Radius.swift in Sources */,
 				318DC651263D178B00966BAF /* ChatRoomService.swift in Sources */,
+				31BA57372820EED600316600 /* SKPhoto.swift in Sources */,
 				318DC661263D179000966BAF /* DotBadgeView.swift in Sources */,
 				318DC71B263D1ACA00966BAF /* ProfileEditViewModel.swift in Sources */,
 				318DC622263D15F900966BAF /* UIButton+Extended.swift in Sources */,
+				31BA57262820EED600316600 /* SKPhotoBrowser.swift in Sources */,
 				318DC641263D165A00966BAF /* NetworkReachability.swift in Sources */,
 				318DC739263D1ACA00966BAF /* ArticleReplyLogViewController.swift in Sources */,
 				318DC762263D1AE600966BAF /* ChatRoomListViewController.swift in Sources */,
@@ -1018,15 +1121,22 @@
 				318DC67B263D17B600966BAF /* Footprint.swift in Sources */,
 				318DC63E263D165A00966BAF /* ActionSheet.swift in Sources */,
 				318DC734263D1ACA00966BAF /* PasscodeLockViewController.swift in Sources */,
+				31BA572A2820EED600316600 /* SKIndicatorView.swift in Sources */,
+				31BA57322820EED600316600 /* UIImage+Rotation.swift in Sources */,
 				318DC763263D1AE600966BAF /* ChatMessageViewController.swift in Sources */,
 				318DC61C263D15F900966BAF /* Array+Extended.swift in Sources */,
 				318DC728263D1ACA00966BAF /* AccountTableViewController.swift in Sources */,
 				318DC685263D17B600966BAF /* ChatRoom.swift in Sources */,
+				31BA57292820EED600316600 /* SKPaginationView.swift in Sources */,
 				318DC654263D178B00966BAF /* ArticleReplyLogService.swift in Sources */,
+				31BA57272820EED600316600 /* SKMesurement.swift in Sources */,
 				318DC682263D17B600966BAF /* ChatMedia.swift in Sources */,
 				318DC625263D15F900966BAF /* CALayer+RuntimeAttribute.swift in Sources */,
 				318DC61D263D15F900966BAF /* UITextField+Extended.swift in Sources */,
+				31BA57392820EED600316600 /* SKToolbar.swift in Sources */,
+				31BA573B2820EED600316600 /* SKCacheable.swift in Sources */,
 				318DC726263D1ACA00966BAF /* BlockListViewController.swift in Sources */,
+				31BA57312820EED600316600 /* UIApplication+UIWindow.swift in Sources */,
 				318DC732263D1ACA00966BAF /* FaqViewController.swift in Sources */,
 				318DC643263D16F500966BAF /* R.generated.swift in Sources */,
 				318DC63A263D165A00966BAF /* Authorization.swift in Sources */,
@@ -1038,7 +1148,9 @@
 				318DC62B263D15F900966BAF /* ObservableConvertibleType.swift in Sources */,
 				318DC63B263D165A00966BAF /* Alert.swift in Sources */,
 				318DC620263D15F900966BAF /* UIImageView+Extended.swift in Sources */,
+				31BA572C2820EED600316600 /* SKPhotoBrowserOptions.swift in Sources */,
 				318DC67A263D17B600966BAF /* UsersData.swift in Sources */,
+				31BA573A2820EED600316600 /* SKPhotoBrowserDelegate.swift in Sources */,
 				318DC74D263D1AD400966BAF /* SearchViewController.swift in Sources */,
 				318DC730263D1ACA00966BAF /* MyProfileViewController.swift in Sources */,
 				318DC768263D1AE600966BAF /* ChatRoomListCell.swift in Sources */,
@@ -1053,6 +1165,7 @@
 				318DC751263D1AD400966BAF /* TalkButtonTableViewCell.swift in Sources */,
 				318DC756263D1AD400966BAF /* SearchGridCell.swift in Sources */,
 				318DC629263D15F900966BAF /* NVActivityIndicatorView+Extended.swift in Sources */,
+				31BA572B2820EED600316600 /* SKAnimator.swift in Sources */,
 				318DC64E263D178B00966BAF /* UserBlockedService.swift in Sources */,
 				318DC64F263D178B00966BAF /* ArticleService.swift in Sources */,
 				318DC73E263D1ACA00966BAF /* NoticeTableViewCell.swift in Sources */,
@@ -1061,9 +1174,12 @@
 				318DC73C263D1ACA00966BAF /* FootprintTableViewCell.swift in Sources */,
 				318DC62D263D15F900966BAF /* RxImagePickerDelegateProxy.swift in Sources */,
 				318DC662263D179000966BAF /* CircleButton.swift in Sources */,
+				31BA572D2820EED600316600 /* SKDetectingImageView.swift in Sources */,
 				318DC76A263D1BB300966BAF /* MainTabViewController.swift in Sources */,
 				318DC722263D1ACA00966BAF /* NewPasscodeInputViewController.swift in Sources */,
+				31BA572F2820EED600316600 /* SKDetectingView.swift in Sources */,
 				318DC623263D15F900966BAF /* ViewController+Extended.swift in Sources */,
+				31BA57362820EED600316600 /* SKLocalPhoto.swift in Sources */,
 				318DC766263D1AE600966BAF /* ChatPhotoCell.swift in Sources */,
 				318DC737263D1ACA00966BAF /* NoticeViewController.swift in Sources */,
 				318DC639263D165A00966BAF /* Constants.swift in Sources */,
@@ -1233,7 +1349,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
 				);
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.PlateChat-dev";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
@@ -1268,7 +1384,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
 				);
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.p-chat";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
@@ -1358,11 +1474,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlateChat_Swift5/libs",
 				);
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.p-chat";
 				PRODUCT_MODULE_NAME = PlateChat_Swift5;
 				PRODUCT_NAME = "P-Chat!";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRODUCTION;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "PlateChat_Swift5/libs/ImobileSdkAds-Bridging-Header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
