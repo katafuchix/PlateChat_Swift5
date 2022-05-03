@@ -48,4 +48,5 @@ target 'PlateChat_Swift5' do
   pod 'SwiftDate'
   pod 'ReachabilitySwift'
   pod 'IQKeyboardManagerSwift'
+  pod 'Google-Mobile-Ads-SDK'
 end

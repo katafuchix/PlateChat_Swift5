@@ -11,6 +11,7 @@ import FirebaseCrashlytics
 import UserNotifications
 import IQKeyboardManagerSwift
 import SVProgressHUD
+import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -93,6 +94,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(appWillResignActive(_:)), name: UIScene.willDeactivateNotification, object: nil)
 
         NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive(_:)), name: UIScene.didActivateNotification, object: nil)
+        
+        // Initialize the Google Mobile Ads SDK.
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         return true
     }

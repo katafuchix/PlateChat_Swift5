@@ -10,6 +10,7 @@ import UIKit
 import SVProgressHUD
 import Rswift
 import NSObject_Rx
+import GoogleMobileAds
 
 class SearchViewController: UIViewController {
 
@@ -29,6 +30,8 @@ class SearchViewController: UIViewController {
     let IMOBILE_BANNER_MID = "494993"
     let IMOBILE_BANNER_SID = "1766255"
     
+    var bannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,7 +48,7 @@ class SearchViewController: UIViewController {
 
         self.bind()
         
-        
+        /*
         // スポット情報を設定します
         ImobileSdkAds.register(withPublisherID: IMOBILE_BANNER_PID, mediaID:IMOBILE_BANNER_MID, spotID:IMOBILE_BANNER_SID)
         // 広告の取得を開始します
@@ -66,8 +69,42 @@ class SearchViewController: UIViewController {
         self.adBaseView.addSubview(imobileAdView)
         // 広告を表示します
         ImobileSdkAds.show(bySpotID: IMOBILE_BANNER_SID, view: imobileAdView)
+        */
+        // In this case, we instantiate the banner with desired ad size.
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+
+        addBannerViewToView(bannerView)
+        
+        bannerView.adUnitID = "ca-app-pub-3442728876051584/4432732667"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
 
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+      bannerView.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(bannerView)
+        view.addConstraints([          // 生成した制約を設定する
+                NSLayoutConstraint(
+                        item: bannerView,
+                        attribute: .centerX,
+                        relatedBy: .equal,
+                        toItem: view,
+                        attribute: .centerX,
+                        multiplier: 1.0,
+                        constant: 0.0
+                ),
+                NSLayoutConstraint(
+                        item: bannerView,
+                        attribute: .top,
+                        relatedBy: .equal,
+                        toItem: self.collectionView,
+                        attribute: .bottom,
+                        multiplier: 1.0,
+                        constant: 0.0
+                )
+        ])
+     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.networkChecking()
