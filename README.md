@@ -1,5 +1,7 @@
 # PlateChat_Swift5
 
+- firebase functions for thi app https://github.com/katafuchix/Plate-Chat-typescript
+
 <img src="https://github.com/user-attachments/assets/1e988a3a-d4dd-4b94-a8fc-ab43663df0b1" width="480"><br><br>
 
 <img src="https://github.com/user-attachments/assets/665d1f05-d089-40ce-9511-6b3cc907251a" width="480"><br><br>
